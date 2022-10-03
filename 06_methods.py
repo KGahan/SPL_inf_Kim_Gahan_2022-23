@@ -6,13 +6,14 @@ def addTwo(a, b):
 print(addTwo(2, 4))
 
 def randomNr():
-    random = random.Random()
-    return random.randint(10,30)
+    _random = random.Random()
+    __random = random.randint(100,200)
+    return __random
 
-print(randomNr)
+print(str(randomNr()))
 
 def stringArray():
     strings = ["Günther", "Klaus"]
     return strings[0]
 
-print(stringArray)
+print(stringArray())
