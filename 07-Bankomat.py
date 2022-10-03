@@ -1,4 +1,3 @@
-endless = True
 kontostand = 0
 
 print("Was möchtest du machen?")
@@ -7,7 +6,7 @@ print("2 ... Abheben")
 print("3 ... Kontostand")
 print("4 ... Beenden")
 
-while endless:
+while True:
     selection = int(input())
     if selection == 1:
         print("Wie viel möchtest du Einzahlen?")
