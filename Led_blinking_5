@@ -1,0 +1,15 @@
+import board
+import busio
+import adafruit_bmp280
+# Sensor als Objekt erstellen in Abhaengigkeit von I2C
+i2c = busio.I2C(board.SCL, board.SDA)
+sensor = adafruit_bmp280.Adafruit_BMP280_I2C(i2c)
+# Dieser Wert muss an den aktuellen Luftdruck Ihres Standorts geaendert werden
+# ansonsten kommt es zu Ungenauigkeiten
+# Wetterdienste koennen Ihnen Auskunft geben
+# 1013.25 hPa ist der mittlere Luftdruck auf Meereshoehe
+sensor.sea_level_pressure = 1013.25
+# Ausgabe der Messwerte
+print("\nTemperatur: %0.1f *C" % sensor.temperature)
+print("Luftdruck: %0.1f hPa" % sensor.pressure)
+print("Höhe: %0.2f m" % sensor.altitude)
